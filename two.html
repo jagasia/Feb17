@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validatePasswords()
+        {
+            var password=document.getElementById('password').value;
+            var cpassword=document.getElementById('cpassword').value;
+            // alert('Comparing '+password+' with '+cpassword);
+            if(password!=cpassword)
+            {
+                    document.getElementById('divError').innerHTML="<font color=red>Passwords does not match</font>";
+                    document.getElementById('password').style.borderColor='red';
+            }
+            else
+                document.getElementById('divError').innerText='';
+        }
+    </script>
+</head>
+<body>
+    User Name: <input type="text" name="" id=""><br>
+    Password: <input type="text" name="" id="password"><br>
+    Confirm Password: <input type="text" name="" id="cpassword"><br>
+    <input type="button" value="Submit" onclick="validatePasswords()">
+    <div id="divError">
+    
+    </div>
+</body>
+</html>

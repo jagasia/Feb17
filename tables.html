@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //if we write code directly inside script tag, it is executed in page load itself. even before page is displayed
+        //this is similar to <body onload="fn()">
+        // var str='hello';
+        //      str+=' world';
+     //       alert(str);			//hello world
+        // document.write('<br><br><br>'+str);
+
+
+            // var s1=new String('hello');
+            // var s2=new String('hello');
+            // alert('comparing s1 and s2: '+(s1==s2));
+
+
+            var s1='hello';
+            var s2='hello';
+            alert(s1==s2)
+
+
+        // var d1=new Date();
+		// 	var d2=new Date();
+		// 	if(d1==d2)
+        //             alert('equal')
+        //     else
+        //         alert('not equal')
+        //     alert(d1+" .......... "+d2)
+
+
+        function generateTable()
+        {
+            
+            document.getElementById('t').innerHTML='';
+            var no=document.getElementById('no').value;
+            no=Number(no);      //convert text to number
+            //alert(no)
+            // <tr>
+            //     <td>1</td><td>*</td><td>5</td><td>=</td><td>5</td>
+            // </tr>
+            var code='<tbody>';
+            for(var i=1;i<=10;i++)
+            {
+                console.log(i);
+            //     document.getElementById('t').innerHTML+=`<tr>
+            //     <td>`+i+`</td><td>*</td><td>`+no+`</td><td>=</td><td>`+(i*no)+`</td>
+            // </tr>`;
+            code+=`<tr><td>`+i+`</td><td>*</td><td>`+no+`</td><td>=</td><td>`+(i*no)+`</td></tr>`;
+            }
+            code+='</tbody>';
+            document.getElementById('t').innerHTML=code;
+        }
+        function fn2()
+        {
+            var x=document.getElementById('t');
+            console.log(x);
+        }
+    </script>
+</head>
+<body>
+    <input type="number" name="" id="no">
+    <input type="button" value="Submit" onclick="generateTable()">
+    <input type="button" value="Ok" onclick="fn2()">
+    <table id="t">
+    </table>
+</body>
+</html>

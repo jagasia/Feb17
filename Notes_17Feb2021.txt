@@ -1,0 +1,401 @@
+Task:
+	create a html page that contains a "div".
+	The paragaphs inside this div should be displayed in multiple columns.
+	
+	Identify the css properties and their possible values related to columns.
+	
+
+
+	in css, there will be more than 1 way of styling
+
+	ex:
+		column-rule	(contains all options)
+		column-rule-width	(only for column rule width)
+
+
+		columns
+		column-count
+
+		column-rule: 4px double #ff00ff;	(4px is the width)
+							we can specify those 3 values separately also
+
+		column-rule-width
+		column-rule-color
+		column-rule-style
+
+            column-rule: 4px double blue; 	/* this is same as below 3 lines */
+            column-rule-width:5px ;
+            column-rule-style: dotted;
+            column-rule-color: orange;
+
+
+
+
+
+
+5 group of 5 members each (1 team having 6 members)
+6 group of 4 members each (2 teams having 5 members)
+
+
+
+Create a folder like
+	team1
+
+		keep all files inside this folder or its sub folder
+		all paths should be relative path
+			do not use		d:\	
+
+
+
+project folder 
+	team2
+		index.html
+		other html files also here
+		images/
+			all image files
+
+	location reference should be
+		images/pic1.jpg
+
+
+=======================================================
+Javascript
+----------
+
+What is the difference between
+	static and dynamic web page
+
+	suppose i display time in my web page.	Will the time be same forever?	(at this moment, yes). With all the techniques you learned so far, 
+	HTML
+	CSS
+			14:16 IS THE time now. But this will not change
+
+	static web page will display information that is always same
+
+	Dynamic means,
+		if i select a country in a drop downlist, corresponding states/ provinces should be displayed in response to my user action
+
+	user interact like clicking a button, typing something, selecting an option, etc
+		if the program respond to those actions accordingly, then it is a DYNAMIC web page
+
+	validations, we were able to give custom message. but not much of conditions
+	:hover effect
+	are some aspect we did in HTML, CSS 
+
+	Dynamic web pages, respond to user interaction, produce different output based on user input
+		calculation
+		validation
+		computation
+	
+	
+Dynamic web pages:
+	i) client side scripting
+	ii) server side scripting
+
+	script?
+		program that produces output based on input
+
+	example for scripting languages
+		javascript, vbscript, servlet, JSP, ASP, PHP, etc (related to web appln)
+
+	javascript, vbscript comes under client side script language category
+	servlet, JSP, ASP, PHP	comes under server side script language category
+
+	what it means client side and server side?
+	lets understand a web application architecture
+
+	if i am accessing facebook.com from this computer,
+		this computer is called as client
+		the facebook website pages like html pages, comes from a "SERVER"
+
+	question is, Where does your program execute???????		(not where the programs are stored. the programs are always stored in the server. Facebook.com means there are lot of programs, html, css, js, etc etc) all these files are not stored in every computer in the world
+
+	sometimes, the programs come to client machine and execute in client's computer. (They are called as client side script)
+
+	some programs stay in server only, execute at server and produce output. The output only comes to client's browser. They are called as server side script.
+
+	
+Javascript is a client side script, (because, it is executed in the clients browser)
+	ex:
+		when i type password, the password strength (weak, moderate, strong) can be checked using client side script itself. NO NEED TO GO TO SERVER TO check the password strength
+
+		BUT
+		If the password is correct or not, cannot be checked at client itself. We need to check the database (which is present in the server)
+
+
+	suppose, i display "time" using javascript, which time will be displayed?	(client machine's time)
+
+	suppose, i display time using servlet, server's time will be displayed.
+
+	there are some guidelines to decide, client side or server side script should be used.
+		javascript runs in client, so it cannot access database.
+
+	
+Javascript has lot of versions
+	ECMA	
+		European Computer Manufacturers' Association
+
+	ECMA Script shortly called as ES5, ES6		
+
+	where does javascript run? it runs in browser (chrome, ie, firefox)
+
+	whenver javascript new version comes, browsers also need to upgrade. otherwise old browsers do not understand new version of javascript.
+
+	So to address this problem, ECMA has introduced a new language "typescript" on compilation, it will translated to javascript
+
+------------------
+javascript is not compiled language. It is interpreted. 
+
+Javascript is an object oriented language
+interfaces
+constructors
+overloading
+overriding
+
+declare variables
+define functions
+call functions
+
+Javascript uses Document Object Model to represent the web page as an object
+what is object
+	properties
+	function
+	events			click		change 		focus
+
+lets take a textbox
+	value is a property
+	id is a property
+	class is a property
+	show()	is a method
+	hide()
+
+
+function fn1()
+{
+	
+}
+
+DOM
+	in dom, we represent the entire page as an object (document)
+
+	document is an object that represents entire page
+	using document object, we can access any of its child elements
+
+TasK:
+	var x;			// i have not assigned any value to x. now x is "undefined"
+
+
+objects in javascript can be
+	null			type is assigned. but value is not assigned
+	undefined		type is not assigned.
+
+
+Task:
+	1) add 2 text boxes (no1, no2)
+	2) add buttons to 
+		Add
+		Subtract
+		Multiply
+		
+	while clicking these buttons, those operations should happen
+
+
+
+TasK:
+	write a javascript function that will check if the 
+		password matches with confirm password or not
+
+
+Task:
+	Display the error message in the <div></div> (instead of alert dialog box)
+	
+
+	Javascript can access any element in a page, using DOM
+		document.getElementById
+
+
+	value property is used for elements which has scalar value (single value)
+	But <div> is a container and hence do not have value property
+		instead, use innerText property (or) innerHTML property
+		
+	innerText does not support HTML tags. It displays tags as text
+	innerHTML process the tags and produce formatted result
+
+	
+
+THERE are html elements that has 
+		value 
+There are html elements that has
+		innerText and 
+		innerHTML 
+
+	elements like
+		<p></p>	
+		<div>
+		<span>
+		<table>
+		<body>
+		
+
+	these elements have innerText or innerHTML property
+
+
+Task:
+	text box to accept a number
+		and display a multiplication table of that number (1 to 10)
+	ex:
+		if number is 5
+
+		1 * 5 = 5
+		2 * 5 = 10
+
+		upto 10 * 5 = 50
+
+	Hint:
+		keep a blank <table> element in the body. Use innerHTML to write inside the <table> on button click
+
+
+	A text box and a button
+	for(var i=1;i<=10;i++)
+	{
+	
+	}
+
+
+
+in javascript, a string literal should be in 1 line only if we use single quote or double quote
+but 
+for multi line literal, we can use ``	(this symbol is found left side of 1 button) ie., tilde symbol, same button
+
+var str='hello';
+var str+=' world';
+alert(str);			//hello world
+
+var i=20;
+i+=10;							i=i+10;
+		what is i now?		30.
+
++= means		
+	-=
+	*=
+	/=
+	%=
+
+a+=10		means 	a=a+10
+
+document.write('hello world');
+
+Operators in Java Script language:
+	equality 
+		==
+		===
+
+	== is used to compare the value or reference of the operands
+		ex:
+			var i=20;
+			var j=20;
+			if(i==j)			//here, the value of i and value of j are compared
+		why the values are compared?	Because, i and j are value types. Number is value type
+
+		ex:
+			var d1=new Date();
+			var d2=new Date();
+			if(d1==dt2)			//here, the ref of d1 and ref of d2 are compared
+		why the ref are compared?	Because, d1 and d2 are ref types. Objects are reference types
+
+            var s1='hello';
+            var s2='hello';
+            alert(s1==s2)		//true because, s1 and s2 are same reference objects. Their memory address is same
+
+
+
+		var s1=new String('hello');
+            var s2=new String('hello');
+            alert('comparing s1 and s2: '+(s1==s2));
+		//false because, s1 has a new memory. 	s2 has a new memory.  Their memory addresses are different. So == returns false while comparing their references.
+
+-----------------------------------------
+what is === operator?
+	
+	=== compares value/ref and also the type of the operands
+
+	this means	'is same'
+
+
+
+when i say
+	document.getElementById('password')
+		this represent that textbox itself as an object
+
+	document.getElementById('cpassword')
+		this is another object
+
+		===
+	this will say false only because, though values are same (ref are different) even if ref are same, but type also is checked.
+
+we can create one function for all button click also. so we can check if which button is clicked
+
+------------------------------------------------
+Arithmetic operators
++
+-
+*
+/
+%
+**
+--
+++		4%5		is equal to 4
+		5%4		is equal to 1
+		
+	we can use modulo when we want to get a number only below given no
+
+	there are only 5 options we have	(0 to 4)
+
+		any number %5 will return 0-4 only
+
+
+x++;
+++x;
+
+There is no difference when it is the only operation in that line
+
+var y=x++;			//here post increment has significance. Increment is postponed and assignment happens
+
+var y=++x;			//here pre increment. so x increments first and then assignment
+
+----------------------------------
+Assignment operators:
+---------------------
+
+=
++=
+-=
+/=
+%=
+**=			x**=y		means, 		x=x**y
+
+
+<<		means left shift
+	5<<2	means?		binary of 5 is 101
+	101 is represented as 0000 0101
+	0000 0101	left shift twice	means, all 1s shift left twice
+	0001 0100	20 is the answer
+
+	left shift is like multiply by 2
+	
+>>
+	4>>2	
+		4 means?		100
+				0000 0100		right shift once means divide by 2
+				0000 0010	equal to 2
+				0000 0001	equal to 1
+
+int i=20;
+String str=i;		//error
+String str=i+"";		//easily converted it to string
+String str=String.valueOf(i);	//
+
+
+Activity:
+	identify the operators in javascript and identify their significance
+
